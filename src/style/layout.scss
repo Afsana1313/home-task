@@ -1,0 +1,142 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+.login-form-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/front.png'), url('../assets/bg.png');
+    background-repeat: no-repeat;
+    background-position: 20% -50px, left;
+    position: relative;
+}
+.login-form{
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    width: $login-form-width;
+    height: $login-form-height;
+    box-shadow: $login-form-shadow;
+    background-color: $login-form-background-color;
+    border-radius: $login-form-border-radius;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .title{
+        font-weight: 400;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    input{
+        width: $login-form-input-width;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: $login-form-input-font-size;
+        line-height: $login-form-input-line-height;
+    }
+    input:placeholder{
+        font-size: $login-form-input-font-size;
+        line-height: $login-form-input-line-height;
+    }
+    button[type="submit"]{
+        width: $btn-width;
+        background-color: $btn-bg-color;
+        border: none;
+        border-radius: 10px;
+        height: $btn-height;
+        color: white;
+        font-size: 20px;
+        line-height: 1;
+        margin: 50px 0;
+    }
+}
+.forgot-password-container {
+    width: $login-form-input-width;
+    display: flex;
+    justify-content: flex-end;
+    span{
+    font-size: $forgot-pw-font-size;
+    line-height: $forgot-pw-line-height;
+    color: $forgot-pw-color;
+
+}
+}
+.form-separator-container {
+    width: $login-form-input-width;
+    // text-align: center;
+    position: relative;
+    display: block;
+     &:before{
+        position: absolute;
+        top: 50%;
+        content: '';
+        width: 40%;
+        height: 2px;
+        background-color: black;
+
+    }
+    &:after{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        content: '';
+        width: 40%;
+        height: 2px;
+        background-color: black;
+    }
+    span{
+    width: $login-element-width;
+    color: $form-separator-color;
+    font-size: $form-separator-font-size;
+    line-height: $form-separator-line-height;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+     transform: translate(45%,-50%);   
+}
+}
+.third-party-authenticator-container{
+    margin: 50px 0 30px;
+    img{
+        margin: 0 25px;
+    }
+}
+.sign-up{
+    font-weight: bold;
+    color: $blue;
+}
+@media screen and (max-width: 768px) {
+    .login-form-container{
+        background-position: right;
+        background-size: contain , cover;
+    }
+    .login-form{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+@media screen and (max-width: 425px) {
+    .login-form-container{
+        background-position: right bottom;
+        background-size: cover , cover;
+    }
+    .login-form{
+        width: 350px;
+        padding: 0 10px;
+    }
+}
