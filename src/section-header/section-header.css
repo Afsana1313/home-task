@@ -1,0 +1,31 @@
+.section-header-wrapper {
+  margin-top: 200px;
+  width: 100%;
+  padding: 5px 0 5px 5px;
+  display: flex;
+  align-items: center;
+}
+.section-header-wrapper .red-bar {
+  border: 2px solid #d93600;
+  width: 20px;
+  height: 0;
+  margin-right: 5px;
+}
+.section-header-title {
+  word-wrap: normal;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  width: 15vw;
+}
+.section-header-wrapper .gray-bar {
+  border: 1px solid #ededed;
+  width: calc(100% - 20px - 15vw);
+  height: 0;
+}
+@media only screen and (max-width: 768px) {
+  .section-header-title {
+    width: auto;
+    font-size: 15px;
+  }
+}

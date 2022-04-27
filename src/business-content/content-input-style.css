@@ -1,0 +1,179 @@
+.content-input-block {
+  width: 100%;
+  display: flex;
+}
+.content-input-block .right-block {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+.content-input-block .left-block {
+}
+.text-input-wrapper {
+  width: 400px;
+  height: 400px;
+}
+.image-input-wrapper {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.image-input-wrapper img {
+  display: block;
+}
+.image-input-container {
+  margin: 0 auto;
+  width: 320px;
+  height: 240px;
+  position: relative;
+}
+.return-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 100;
+  background-color: #e0f4fe;
+  border: 1px solid #f2f2f2;
+}
+.select-image-btn {
+  position: absolute;
+  bottom: 30%;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 100;
+  background-color: #fff;
+  padding: 5px 10px;
+  font-size: 11px;
+  border: 1px solid #f2f2f2;
+}
+.uploaded-image {
+  width: 100%;
+  height: auto;
+  z-index: 10000;
+}
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 10000;
+}
+.image-preview-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+.image-text-content-area-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+/* Text Input CSS declarations */
+.text-input-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2e2e2;
+}
+.text-input-top-bar {
+  padding: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: flex-start;
+}
+.text-input-top-bar-box {
+  padding: 5px;
+  margin-left: 5px;
+  border: 1px solid transparent;
+}
+.text-input-top-bar-box:hover {
+  border: 1px solid #e1e1e1;
+  background-color: #f1f1f1;
+}
+.text-input-area {
+  width: 100%;
+  height: 400px;
+}
+/* Link insertion modal css declarations */
+.link-insertion-modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.link-insertion-modal-wrapper .close-btn {
+  font-size: 20px;
+  padding: 0;
+  line-height: 1;
+}
+.link-insertion-modal-container {
+  width: 500px;
+  background-color: #fff;
+}
+.link-insertion-modal-header {
+  font-size: 14px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(179, 169, 169);
+}
+.link-insertion-modal-body {
+  font-size: 16px;
+}
+.link-insertion-modal-footer {
+  border-top: 1px solid rgb(179, 169, 169);
+  font-size: 14px;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+.link-insertion-modal-footer button {
+  border: 1px solid gray;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+/* Modal Input form */
+.modal-input-form-wrapper {
+  padding: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .content-input-block {
+    flex-direction: column;
+  }
+  .content-input-block .right-block {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+}
+.modal-input-form-item {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+.modal-input-form-item .left {
+  width: 200px;
+}
+.modal-input-form-item .right {
+  width: 100%;
+}
+.modal-input-form-item .right input,
+.modal-input-form-item .right select {
+  padding: 7px;
+  width: 100%;
+  border: 1px solid rgb(179, 169, 169);
+}
+@media only screen and (max-width: 480px) {
+  .content-input-block .right-block {
+    flex-direction: column;
+    margin: 0;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+}
