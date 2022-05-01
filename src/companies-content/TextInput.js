@@ -7,12 +7,18 @@ function TextInput() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedText, setSelectedText] = useState();
   const [textContent, setTextContent] = useState();
-
+  const [startIndex, setStartIndex] = useState();
+  const [endIndex, setEndIndex] = useState();
   function GetSelectedText() {
     if (document.getSelection) {
       var sel = document.getSelection();
       // alert(sel.getRangeAt(0));
-      alert(sel.anchorOffset);
+      setTextContent(document.getElementById("__text-editor").textContent);
+      console.log(document.getElementById("__text-editor").textContent);
+      setStartIndex(sel.anchorOffset);
+      setEndIndex(sel.focusOffset);
+      // console.log(sel.anchorOffset, sel.focusOffset);
+      setSelectedText(sel.toString());
       return sel;
     } else {
       if (document.selection) {
@@ -32,7 +38,7 @@ function TextInput() {
               className="link-button"
               onClick={() => {
                 setOpenModal(true);
-                setSelectedText(GetSelectedText());
+                GetSelectedText();
               }}
             >
               <GrLink />
@@ -56,9 +62,13 @@ function TextInput() {
       </div>
       {!!openModal && (
         <LinkInsertionModal
+          start={startIndex}
+          end={endIndex}
           closeModal={() => setOpenModal(false)}
           text={selectedText}
+          textContent={textContent}
           setSelectedText={(e) => setSelectedText(e.target.value)}
+          setTextContent={(newContent) => setTextContent(newContent)}
         />
       )}
     </div>

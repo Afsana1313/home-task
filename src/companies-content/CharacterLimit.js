@@ -4,13 +4,12 @@ function CharacterLimit({ possibleLength, text }) {
   const subText = {
     fontSize: "11px",
     color: text.length == possibleLength ? "red" : "gray",
-    textAlign: "right",
-    marginBottom: "30px"
+    textAlign: "right"
   };
-  console.log(text.length);
+  //console.log(text);
   return (
     <div className="image-text-content-area-character-counting" style={subText}>
-      {possibleLength - text.length} character
+      {text.length} character
       {possibleLength - text.length == 1 ? " " : "s "}
       of {possibleLength} characters are remaining{" "}
     </div>

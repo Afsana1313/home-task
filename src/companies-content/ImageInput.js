@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import fallback from "./fallback.png";
+//import fallback from "./fallback.png";
 
-function ImageInput({ image }) {
+function ImageInput({ image, width, height, fallback }) {
   const [file, setFile] = useState("");
   const [imagePreviewUrl, setImagePreviewUrl] = useState(image);
   const [showImage, setShowImage] = useState(true);
@@ -29,8 +29,8 @@ function ImageInput({ image }) {
     setShowImage(true);
   };
   const imageArea = {
-    width: "320px",
-    height: "240px"
+    width: width + `px`,
+    height: height + `px`
   };
   const deleteBtnStyle = {
     display: file == "" || image ? "block" : "none",

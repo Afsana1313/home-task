@@ -10,7 +10,7 @@ function ModalInputForm({ text, setSelectedText }) {
       <div className="modal-input-form">
         <form>
           <div className="modal-input-form-item">
-            <div className="left">Link Url</div>
+            <div className="left">リンク先URL</div>
             <div className="right">
               <input
                 value={linkUrl}
@@ -19,19 +19,19 @@ function ModalInputForm({ text, setSelectedText }) {
             </div>
           </div>
           <div className="modal-input-form-item">
-            <div className="left">Link Source Text</div>
+            <div className="left">リンク元テキスト</div>
             <div className="right">
               <input value={text} onChange={setSelectedText} />
             </div>
           </div>
           <div className="modal-input-form-item">
-            <div className="left">Title</div>
+            <div className="left">タイトル</div>
             <div className="right">
               <input value={title} onChange={(e) => setTitle(e.target.value)} />
             </div>
           </div>
           <div className="modal-input-form-item">
-            <div className="left">Target Attribute</div>
+            <div className="left">ターゲット属性</div>
             <div className="right">
               <select onChange={(e) => setAttribute(e.target.value)}>
                 <option value="none">None</option>
