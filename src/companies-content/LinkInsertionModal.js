@@ -44,7 +44,9 @@ function LinkInsertionModal({
                   <div className="right">
                     <input
                       value={linkSrcText}
-                      onChange={(e) => setLinkSrcText(e.target.value)}
+                      onChange={(e) => {
+                        setLinkSrcText(e.target.value);
+                      }}
                     />
                   </div>
                 </div>
@@ -74,12 +76,15 @@ function LinkInsertionModal({
           <button
             style={okBtnStyle}
             onClick={() => {
+              console.log("text content ", textContent);
               let newContent =
                 textContent.slice(0, start) +
+                `<a href="${linkUrl}" target='_blank'>` +
                 linkSrcText +
+                `<a/>` +
                 textContent.slice(end, textContent.length);
-              console.log(textContent, text, start, end);
-              console.log(linkSrcText);
+              console.log(textContent, linkSrcText, start, end);
+              console.log(newContent);
               setTextContent(newContent);
               closeModal();
             }}
